@@ -19,21 +19,21 @@ const CustomCarousel = ({ data }) => {
     }, 5000); // Auto slide every 5 seconds
 
     return () => clearInterval(intervalId); // Cleanup on component unmount
-  }, [nextSlide, data.length]); // Include nextSlide in the dependency array
+  }, [slide, data.length]); // Re-run effect when slide or data length changes
 
   return (
     <div className="carousel">
-      <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
       {data.map((item, idx) => (
         <div key={idx} className={slide === idx ? "slide" : "slide slide-hidden"}>
+          <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
           <img src={item.src} alt={item.alt} />
+          <BsArrowRightCircleFill onClick={nextSlide} className="arrow arrow-right" />
           <div className="button-container">
             <button>Watch Now</button>
             <button>Watch List +</button>
           </div>
         </div>
       ))}
-      <BsArrowRightCircleFill onClick={nextSlide} className="arrow arrow-right" />
       <span className="indicators">
         {data.map((_, idx) => (
           <button
