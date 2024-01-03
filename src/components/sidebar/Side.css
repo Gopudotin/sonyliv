@@ -1,0 +1,42 @@
+/* Sidebar.css */
+
+.sidebar {
+  /*width: 80px; */ 
+  height: 100%; 
+  
+  background-size: cover;
+  background-position: center; /* Center the background image */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align icons to the left side */
+  justify-content: space-between;
+
+}
+
+.top-icons,
+.bottom-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align icons to the left side */
+  background-color: #555;
+}
+
+.icon {
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Add margin between icons */
+}
+
+.icon:hover {
+  background-color: #555;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  background-color: #555;
+}
+
+

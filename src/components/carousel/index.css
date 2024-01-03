@@ -1,0 +1,83 @@
+.carousel {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .arrow {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    filter: drop-shadow(0px 0px 5px #555);
+    cursor: pointer;
+    z-index: 2; /* Ensure the arrows are above the slides */
+  }
+  
+  .arrow-left {
+    left: 1rem;
+  }
+  
+  .arrow-right {
+    right: 1rem;
+  }
+  
+  .slide {
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 7px #666;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Ensure the slides are behind the arrows */
+  }
+  
+  .button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add any additional styles for buttons as needed */
+  .button-container button {
+    margin-right: 10px;
+    background-color: #3498db; /* Example background color */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .indicators {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+  }
+  
+  .indicator {
+    background-color: antiquewhite;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px #555;
+    margin: 0 0.2rem;
+    cursor: pointer;
+  }
+  
+  .slide-hidden {
+    display: none;
+  }
+  
+  .indicator-inactive {
+    background-color: gray;
+  }
+  
